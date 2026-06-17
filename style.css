@@ -132,9 +132,13 @@ ul {
 }
 
 .navbar__logo img {
-  height: 40px;
-  width: auto;
   display: block;
+}
+
+.navbar__monograma {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Desktop nav links */
