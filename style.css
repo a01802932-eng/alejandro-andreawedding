@@ -372,6 +372,49 @@ ul {
 
 
 /* ═══════════════════════════════════════
+   ITINERARIO
+   ═══════════════════════════════════════ */
+.itinerary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  max-width: 280px;
+  margin: 0 auto 0;
+}
+
+.itinerary__event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.itinerary__icon {
+  width: 64px;
+  height: auto;
+  display: block;
+  margin: 0 auto 14px;
+  object-fit: contain;
+}
+
+.itinerary__name {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  color: #3d3b3a;
+  margin-bottom: 4px;
+}
+
+.itinerary__time {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #5b7451;
+}
+
+
+/* ═══════════════════════════════════════
    SECCIÓN 3 — DETALLES (bloques)
    ═══════════════════════════════════════ */
 .detail-blocks-row {
@@ -385,6 +428,14 @@ ul {
 .detail-block {
   text-align: center;
   max-width: 200px;
+}
+
+.detail-block__icon {
+  width: 64px;
+  height: auto;
+  display: block;
+  margin: 0 auto 12px;
+  object-fit: contain;
 }
 
 .detail-block__label {
@@ -521,6 +572,11 @@ ul {
   .detail-blocks-row {
     flex-direction: column;
     align-items: center;
+    gap: 40px;
+  }
+
+  .detail-block {
+    max-width: 280px;
   }
 }
 
