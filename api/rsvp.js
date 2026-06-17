@@ -18,10 +18,10 @@ async function rsvpHandler(req, res) {
     return res.status(405).json({ success: false, error: 'Method not allowed' });
   }
 
-  const { nombre, apellido, email, telefono, respuesta, acompanantes } = req.body;
+  const { nombre, apellido, telefono, respuesta, acompanantes } = req.body;
 
   // Validación básica
-  if (!nombre || !apellido || !email || !telefono || !respuesta) {
+  if (!nombre || !apellido || !telefono || !respuesta) {
     return res.status(400).json({ success: false, error: 'Campos requeridos faltantes' });
   }
 
@@ -31,14 +31,13 @@ async function rsvpHandler(req, res) {
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: SHEET_ID,
-      range: 'Sheet1!A:G',
+      range: 'Sheet1!A:F',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[
           timestamp,
           nombre,
           apellido,
-          email,
           telefono,
           respuesta,
           acompanantes ?? 0,
