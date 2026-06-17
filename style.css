@@ -72,6 +72,8 @@ ul {
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* Líneas decorativas */
@@ -242,6 +244,8 @@ ul {
    ═══════════════════════════════════════ */
 .section {
   background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
 .section--hero {
@@ -266,6 +270,8 @@ ul {
   align-items: center;
   text-align: center;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero__logo {
@@ -556,6 +562,8 @@ ul {
   background-color: #ffffff;
   padding: 40px 24px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .footer__text {
@@ -563,6 +571,8 @@ ul {
   font-style: italic;
   font-size: 14px;
   color: #a0b18e;
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -608,6 +618,83 @@ ul {
     padding: 0 20px;
   }
 }
+
+/* ═══════════════════════════════════════
+   PLANTAS DECORATIVAS
+   ═══════════════════════════════════════ */
+.planta {
+  pointer-events: none;
+  user-select: none;
+  display: block;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.planta-inicio-tl {
+  top: 60px;
+  left: -40px;
+  width: 260px;
+}
+
+.planta-inicio-br {
+  bottom: 40px;
+  right: -40px;
+  width: 240px;
+}
+
+.planta-boda-top {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  opacity: 0.45;
+}
+
+.planta-detalles-r {
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  width: 160px;
+  opacity: 0.45;
+}
+
+.planta-detalles-l {
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  width: 160px;
+  opacity: 0.45;
+}
+
+.planta-obsequios {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  opacity: 0.40;
+}
+
+.planta-rsvp-bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  opacity: 0.40;
+}
+
+.planta-footer {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  opacity: 0.35;
+}
+
 
 /* ═══════════════════════════════════════
    FRASE HERO
@@ -700,6 +787,17 @@ ul {
   transform: translateY(0);
 }
 
+
+@media (max-width: 480px) {
+  .planta-inicio-tl { width: 180px; }
+  .planta-inicio-br { width: 160px; }
+  .planta-detalles-r,
+  .planta-detalles-l { width: 100px; }
+  .planta-boda-top,
+  .planta-obsequios,
+  .planta-rsvp-bottom,
+  .planta-footer { width: 100%; }
+}
 
 @media (max-width: 380px) {
   .hero__logo {
