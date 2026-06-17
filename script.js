@@ -126,12 +126,11 @@ rsvpForm.addEventListener('submit', async function (e) {
 
   // Construir payload
   const payload = {
-    nombre:        rsvpForm.nombre.value.trim(),
-    apellido:      rsvpForm.apellido.value.trim(),
-    email:         rsvpForm.email.value.trim(),
-    telefono:      rsvpForm.telefono.value.trim(),
-    respuesta:     rsvpForm.respuesta.value,
-    acompanantes:  parseInt(rsvpForm.acompanantes.value, 10) || 0,
+    nombre:       rsvpForm.nombre.value.trim(),
+    apellido:     rsvpForm.apellido.value.trim(),
+    telefono:     rsvpForm.telefono.value.trim(),
+    respuesta:    rsvpForm.respuesta.value,
+    acompanantes: parseInt(rsvpForm.acompanantes.value, 10) || 0,
   };
 
   // Deshabilitar botón mientras se envía
@@ -139,6 +138,8 @@ rsvpForm.addEventListener('submit', async function (e) {
   submitBtn.textContent = 'Enviando…';
 
   try {
+    console.log('[RSVP] Enviando payload:', payload);
+
     const res = await fetch('/api/rsvp', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -146,6 +147,7 @@ rsvpForm.addEventListener('submit', async function (e) {
     });
 
     const data = await res.json();
+    console.log('[RSVP] Respuesta del servidor:', res.status, data);
 
     if (res.ok && data.success) {
       formMsg.textContent = '¡Gracias! Tu respuesta ha sido registrada.';
@@ -155,6 +157,7 @@ rsvpForm.addEventListener('submit', async function (e) {
       throw new Error(data.error || 'Error del servidor');
     }
   } catch (err) {
+    console.error('[RSVP] Error:', err.message);
     formMsg.textContent = 'Hubo un problema, intenta de nuevo.';
     formMsg.classList.add('form-message--error');
   } finally {
