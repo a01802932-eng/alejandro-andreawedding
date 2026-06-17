@@ -64,11 +64,36 @@
   <section id="inicio" class="section section--hero">
     <div class="hero__content fade-in">
       <img src="assets/logo.png" alt="Andrea &amp; Alejandro" class="hero__logo" />
+      <p class="hero-frase">Dos caminos, una misma dirección.</p>
       <p class="hero__date">11 de Julio del 2026</p>
       <div class="divider divider--center"></div>
+      <div class="countdown">
+        <div class="countdown-item fade-up">
+          <span class="countdown-number" id="cd-dias">00</span>
+          <span class="countdown-label">días</span>
+        </div>
+        <div class="countdown-item fade-up">
+          <span class="countdown-number" id="cd-horas">00</span>
+          <span class="countdown-label">horas</span>
+        </div>
+        <div class="countdown-item fade-up">
+          <span class="countdown-number" id="cd-minutos">00</span>
+          <span class="countdown-label">minutos</span>
+        </div>
+        <div class="countdown-item fade-up">
+          <span class="countdown-number" id="cd-segundos">00</span>
+          <span class="countdown-label">segundos</span>
+        </div>
+      </div>
     </div>
   </section>
 
+
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-ornament">✦</span>
+    <span class="divider-line"></span>
+  </div>
 
   <!-- ═══════════════════════════════════════
        SECCIÓN 2 — BODA
@@ -76,7 +101,7 @@
   <section id="boda" class="section section--content">
     <div class="container fade-in">
 
-      <h2 class="section__title">Ceremonia Religiosa</h2>
+      <h2 class="section__title fade-up">Ceremonia Religiosa</h2>
       <div class="divider divider--center"></div>
 
       <div class="section__text">
@@ -94,7 +119,7 @@
 
       <div class="divider divider--center divider--wide" style="margin: 60px auto;"></div>
 
-      <h2 class="section__title">Recepción</h2>
+      <h2 class="section__title fade-up">Recepción</h2>
       <div class="section__text section__text--italic">
         <p>Después de la ceremonia,<br />
         agradecemos su permanencia<br />
@@ -105,36 +130,42 @@
   </section>
 
 
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-ornament">✦</span>
+    <span class="divider-line"></span>
+  </div>
+
   <!-- ═══════════════════════════════════════
        SECCIÓN 3 — DETALLES
   ═══════════════════════════════════════ -->
   <section id="detalles" class="section section--content">
     <div class="container fade-in">
 
-      <h2 class="section__title">Itinerario</h2>
+      <h2 class="section__title fade-up">Itinerario</h2>
       <div class="divider divider--center"></div>
 
       <div class="itinerary">
 
-        <div class="itinerary__event">
+        <div class="itinerary__event fade-up">
           <img src="assets/9.png" alt="Recepción" class="itinerary__icon" />
           <p class="itinerary__name">Recepción</p>
           <p class="itinerary__time">16:15 hrs</p>
         </div>
 
-        <div class="itinerary__event">
+        <div class="itinerary__event fade-up">
           <img src="assets/10.png" alt="Ceremonia Religiosa" class="itinerary__icon" />
           <p class="itinerary__name">Ceremonia Religiosa</p>
           <p class="itinerary__time">16:30 hrs</p>
         </div>
 
-        <div class="itinerary__event">
+        <div class="itinerary__event fade-up">
           <img src="assets/11.png" alt="Ceremonia Civil" class="itinerary__icon" />
           <p class="itinerary__name">Ceremonia Civil</p>
           <p class="itinerary__time">17:30 hrs</p>
         </div>
 
-        <div class="itinerary__event">
+        <div class="itinerary__event fade-up">
           <img src="assets/15.png" alt="Celebración" class="itinerary__icon" />
           <p class="itinerary__name">Celebración</p>
           <p class="itinerary__time">18:00 hrs</p>
@@ -144,7 +175,7 @@
 
       <div class="divider divider--center divider--wide" style="margin: 60px auto;"></div>
 
-      <h2 class="section__title">Detalles y consideraciones</h2>
+      <h2 class="section__title fade-up">Detalles y consideraciones</h2>
 
       <p class="section__intro">
         Hemos preparado este día con mucho cariño, te pedimos considerar
@@ -154,7 +185,7 @@
       <div class="detail-blocks-row fade-in">
 
         <!-- Detalle 1: No niños -->
-        <div class="detail-block">
+        <div class="detail-block fade-up">
           <img src="assets/12.png" alt="No niños" class="detail-block__icon" />
           <p class="detail-block__label">NO NIÑOS</p>
           <div class="divider divider--center divider--sm"></div>
@@ -165,7 +196,7 @@
         </div>
 
         <!-- Detalle 2: Código de vestimenta -->
-        <div class="detail-block">
+        <div class="detail-block fade-up">
           <img src="assets/13.png" alt="Código de vestimenta" class="detail-block__icon" />
           <p class="detail-block__label">CÓDIGO DE VESTIMENTA</p>
           <div class="divider divider--center divider--sm"></div>
@@ -177,7 +208,7 @@
         </div>
 
         <!-- Detalle 3: Clima -->
-        <div class="detail-block">
+        <div class="detail-block fade-up">
           <img src="assets/14.png" alt="Clima" class="detail-block__icon" />
           <p class="detail-block__label">CLIMA</p>
           <div class="divider divider--center divider--sm"></div>
@@ -192,13 +223,19 @@
   </section>
 
 
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-ornament">✦</span>
+    <span class="divider-line"></span>
+  </div>
+
   <!-- ═══════════════════════════════════════
        SECCIÓN 4 — OBSEQUIOS
   ═══════════════════════════════════════ -->
   <section id="obsequios" class="section section--content">
     <div class="container fade-in">
 
-      <h2 class="section__title">Obsequios</h2>
+      <h2 class="section__title fade-up">Obsequios</h2>
       <div class="divider divider--center"></div>
 
       <p class="section__intro">
@@ -212,13 +249,19 @@
   </section>
 
 
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-ornament">✦</span>
+    <span class="divider-line"></span>
+  </div>
+
   <!-- ═══════════════════════════════════════
        SECCIÓN 5 — ASISTENCIA
   ═══════════════════════════════════════ -->
   <section id="asistencia" class="section section--content">
     <div class="container fade-in">
 
-      <h2 class="section__title">R.S.V.P.</h2>
+      <h2 class="section__title fade-up">R.S.V.P.</h2>
       <div class="divider divider--center"></div>
 
       <p class="section__intro">

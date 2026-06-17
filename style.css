@@ -120,6 +120,7 @@ ul {
 
 .navbar.scrolled {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  border-bottom: 0.5px solid #e8e4de;
 }
 
 .navbar__inner {
@@ -607,6 +608,98 @@ ul {
     padding: 0 20px;
   }
 }
+
+/* ═══════════════════════════════════════
+   FRASE HERO
+   ═══════════════════════════════════════ */
+.hero-frase {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #a0b18e;
+  text-align: center;
+  margin: 0 0 24px 0;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+
+/* ═══════════════════════════════════════
+   COUNTDOWN
+   ═══════════════════════════════════════ */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown-number {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #3d3b3a;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 11px;
+  font-weight: 400;
+  color: #a0b18e;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* ═══════════════════════════════════════
+   SEPARADORES DECORATIVOS
+   ═══════════════════════════════════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 40px;
+  margin: 0;
+}
+
+.divider-line {
+  flex: 1;
+  max-width: 80px;
+  height: 0.5px;
+  background-color: #a0b18e;
+  display: block;
+}
+
+.divider-ornament {
+  font-size: 10px;
+  color: #a0b18e;
+  line-height: 1;
+}
+
+
+/* ═══════════════════════════════════════
+   FADE-UP ANIMATION
+   ═══════════════════════════════════════ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 @media (max-width: 380px) {
   .hero__logo {

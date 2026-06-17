@@ -99,6 +99,64 @@ const rsvpForm   = document.getElementById('rsvpForm');
 const formMsg    = document.getElementById('formMessage');
 const submitBtn  = document.getElementById('submitBtn');
 
+/* ═══════════════════════════════════════
+   COUNTDOWN TIMER
+   ═══════════════════════════════════════ */
+function initCountdown() {
+  const target = new Date('2026-07-11T16:15:00-06:00');
+
+  function update() {
+    const now = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      document.querySelector('.countdown').innerHTML =
+        '<p style="font-family: Crimson Pro, serif; font-style: italic; color: #5b7451;">¡Hoy es el gran día!</p>';
+      return;
+    }
+
+    const dias    = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const horas   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('cd-dias').textContent    = String(dias).padStart(2, '0');
+    document.getElementById('cd-horas').textContent   = String(horas).padStart(2, '0');
+    document.getElementById('cd-minutos').textContent = String(minutos).padStart(2, '0');
+    document.getElementById('cd-segundos').textContent = String(segundos).padStart(2, '0');
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+initCountdown();
+
+
+/* ═══════════════════════════════════════
+   FADE-UP — Intersection Observer
+   ═══════════════════════════════════════ */
+const fadeUpEls = document.querySelectorAll('.fade-up');
+
+const fadeUpObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry, i) {
+    if (entry.isIntersecting) {
+      setTimeout(function () {
+        entry.target.classList.add('visible');
+      }, i * 80);
+      fadeUpObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeUpEls.forEach(function (el) {
+  fadeUpObserver.observe(el);
+});
+
+
+/* ═══════════════════════════════════════
+   FORMULARIO RSVP
+   ═══════════════════════════════════════ */
 rsvpForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
