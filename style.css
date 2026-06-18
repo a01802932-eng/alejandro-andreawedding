@@ -463,7 +463,41 @@ ul {
    SECCIÓN 4 — OBSEQUIOS
    ═══════════════════════════════════════ */
 .cuenta-bancaria {
-  height: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin-top: 8px;
+}
+
+.banco-bloque {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.banco-nombre {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #5b7451;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.banco-detalle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #3d3b3a;
+  line-height: 1.7;
+}
+
+.banco-gracias {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #a0b18e;
+  margin-top: 8px;
 }
 
 
